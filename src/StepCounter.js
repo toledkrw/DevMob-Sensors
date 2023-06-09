@@ -21,7 +21,7 @@ export default StepCounter = () => {
 
     useEffect(() => {
         const subscription = subscribe();
-        // return () => subscription;
+        return () => subscription && subscription.remove();
     }, []);
 
     return (
