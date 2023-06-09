@@ -10,7 +10,7 @@ export default StepCounter = () => {
 
     const subscribe = async () => {
         const available = await Pedometer.isAvailableAsync();
-        setIsPedometerAvailable(String(available));
+        setIsPedometerAvailable(available);
 
         if (available) {
             return Pedometer.watchStepCount(result => {
@@ -21,27 +21,29 @@ export default StepCounter = () => {
 
     useEffect(() => {
         const subscription = subscribe();
-        return () => subscription && subscription.remove();
+        // return () => subscription;
     }, []);
 
     return (
         <View style={null}>
-            <Text style={{color:"white"}}>
+            <Text style={styles.text}>
                 Is Pedometer available in this device:
                 <Text style={{
                     color: isPedometerAvailable ? "green" : "red",
                     fontWeight: "bold"
                 }}>
-                    {" " + isPedometerAvailable}
+                    {" " + String(isPedometerAvailable)}
                 </Text>
             </Text>
-            <Text style={{color:"white"}}>Step count: {stepCount}</Text>
+            <Text style={styles.text}>Step count: {stepCount}</Text>
         </View>
     );
 
 }
 
 const styles = StyleSheet.create({
-
+    text:{
+        color:"white"
+    }
 })
 
