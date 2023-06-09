@@ -4,7 +4,7 @@
 
 <div align="center">
   <a href="#">
-    <img src="assets\map.gif" style="width:200px; height:200px;"alt="Logo" />
+    <img src="https://realtimevfx.com/uploads/default/original/3X/1/6/164207ed353e3649e55d9982f56f81b7066fed96.gif" style="width:200px; height:200px;"alt="Logo" />
   </a>
 
   <h3 align="center">Desenvolvimento Móvel Avançado - Sensors</h3>
@@ -13,7 +13,8 @@
 
 ## 🔰 Sobre o Projeto
 
-Esse projeto foi criado para demonstrar a utilização do 
+Esse projeto foi criado para demonstrar a utilização da biblioteca 'expo-sensors'.
+Neste trabalho deve ser desenvolvido um aplicativo que possa calcular a distância percorrida usando sensores.
 
 
 <br/>
